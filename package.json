@@ -1,0 +1,41 @@
+{
+  "name": "@leslie0403/utils",
+  "version": "1.0.0",
+  "description": "rollup 构建的常用工具函数库",
+  "main": "dist/utils.cjs.js",
+  "module": "dist/utils.esm.js",
+  "browser": "dist/utils.umd.js",
+  "scripts": {
+    "dev": "rollup -wc rollup.config.dev.js",
+    "build": "rollup -c rollup.config.dev.js",
+    "build:prod": "rollup -c rollup.config.prod.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luozyiii/utils.git"
+  },
+  "keywords": [
+    "常用工具函数库"
+  ],
+  "author": "leslie <924361501@qq.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luozyiii/utils/issues"
+  },
+  "homepage": "https://github.com/luozyiii/utils#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "rollup": "^2.50.5",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2"
+  },
+  "dependencies": {
+    "core-js": "3"
+  }
+}
