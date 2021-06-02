@@ -1,5 +1,7 @@
 #### sleep
 
+> 延迟多少毫秒后继续执行
+
 ```javascript
 /**
  * demo1 配合async/await 关键字 使用
