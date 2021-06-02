@@ -9,7 +9,7 @@
     "dev": "rollup -wc rollup.config.dev.js",
     "build": "rollup -c rollup.config.dev.js",
     "build:prod": "rollup -c rollup.config.prod.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "@babel/core": "^7.14.3",
     "@babel/node": "^7.14.2",
     "@babel/preset-env": "^7.14.4",
+    "jest": "^27.0.3",
     "rollup": "^2.50.5",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",

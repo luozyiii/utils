@@ -1,5 +1,6 @@
 # utils
-基于rollup 封装常用的工具函数
+
+基于 rollup 封装常用的工具函数
 
 ### 开始
 
@@ -46,6 +47,30 @@ yarn add core-js@3
   ]
 }
 
+```
+
+### Jest 前端自动化测试
+
+> 保证代码质量
+
+- 简单使用
+
+```javascript
+// 安装
+yarn add jest -D
+// package.json
+"scripts": {
+  "test": "jest"
+},
+// 新建 .test.js文件 编写测试用例
+```
+
+- 修改 jest 配置
+
+```javascript
+// 运行
+yarn jest --init
+// 根据需求选择 后根目录生成jest.config.js
 ```
 
 ### 发布到 npm
