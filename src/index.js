@@ -1,6 +1,9 @@
 /** reg */
 import { isIDCard, isMobile, isEmail } from './reg';
 
+/** params */
+import { getParamFromURL, formatUrl } from './params';
+
 /** number */
 import { toThousands, formatNum } from './number';
 
@@ -10,4 +13,18 @@ import { sleep } from './time';
 /** device */
 import { getDevice } from './device';
 
-export { isIDCard, isMobile, isEmail, toThousands, formatNum, sleep, getDevice };
+/** file */
+import { saveBolbFile } from './file';
+
+export {
+  isIDCard,
+  isMobile,
+  isEmail,
+  getParamFromURL,
+  formatUrl,
+  toThousands,
+  formatNum,
+  sleep,
+  getDevice,
+  saveBolbFile,
+};
