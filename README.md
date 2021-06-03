@@ -70,7 +70,7 @@ yarn add jest -D
 ```javascript
 // 运行
 yarn jest --init
-// 根据需求选择 后根目录生成jest.config.js
+// 根据需求选择后 根目录生成jest.config.js
 ```
 
 ### 发布到 npm
