@@ -16,6 +16,9 @@ import { getDevice } from './device';
 /** file */
 import { saveBolbFile } from './file';
 
+/** best */
+import { debounce, throttle } from './best';
+
 export {
   isIDCard,
   isMobile,
@@ -27,4 +30,6 @@ export {
   sleep,
   getDevice,
   saveBolbFile,
+  debounce,
+  throttle,
 };
