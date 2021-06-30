@@ -1,7 +1,7 @@
 {
   "name": "@leslie0403/utils",
-  "version": "1.0.3",
-  "description": "rollup 构建的常用工具函数库",
+  "version": "1.0.4",
+  "description": "rollup + typescript 构建的常用工具函数库",
   "main": "dist/utils/cjs.js",
   "module": "dist/utils/esm.js",
   "browser": "dist/utils/umd.js",
@@ -10,7 +10,7 @@
     "build": "rollup -c rollup.config.dev.js",
     "build:ts": "rollup -c rollup.config.ts.js",
     "build:prod": "rollup -c rollup.config.prod.js",
-    "types": "tsc --declaration -p ./ -t es2015 --emitDeclarationOnly --outDir types",
+    "types": "tsc --declaration -p ./ -t es2015 --emitDeclarationOnly --outDir dist/utils/types",
     "test": "jest"
   },
   "repository": {
