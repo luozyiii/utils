@@ -4,7 +4,7 @@
  * @return {boolean} 验证结果true/false
  */
 
-export function isIDCard(idcard) {
+export function isIDCard(idcard: string) {
   let reg = /^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$/;
   return reg.test(idcard);
 }
@@ -15,7 +15,7 @@ export function isIDCard(idcard) {
  * @return {boolean} 验证结果true/false
  */
 
-export function isMobile(mobile) {
+export function isMobile(mobile: string) {
   let reg = /^((\(\d{2,3}\))|(\d{3}\-))?(13|15|18|14|17)\d{9}$/;
   return reg.test(mobile);
 }
@@ -26,7 +26,7 @@ export function isMobile(mobile) {
  * @return {boolean} 验证结果true/false
  */
 
-export function isEmail(email) {
+export function isEmail(email: string) {
   let reg = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]+$/;
   return reg.test(email);
 }

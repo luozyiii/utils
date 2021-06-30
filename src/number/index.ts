@@ -8,7 +8,7 @@
  * var num = 3600; num.toLocaleString()
  */
 
-export function toThousands(num) {
+export function toThousands(num: number) {
   var str = num.toString();
   var reg = str.indexOf('.') > -1 ? /(\d)(?=(\d{3})+\.)/g : /(\d)(?=(?:\d{3})+$)/g;
   return str.replace(reg, '$1,');
@@ -22,9 +22,12 @@ export function toThousands(num) {
  * var num = 20210.010009; formatNum(num)
  */
 
-export function formatNum(num, len = 2) {
-  num = String(num);
-  len = parseInt(len);
+export function formatNum(num: number | string, len: number = 2) {
+  if (typeof num === 'number') {
+    num = String(num);
+  }
+  len = parseInt(String(len));
+
   const pad = new Array(len + 1).join('0');
 
   if (num.indexOf('e-') > 0) {

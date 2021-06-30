@@ -3,7 +3,7 @@
  * @param {*} url 网址
  * @param {*} key
  */
-export function getParamFromURL(url, key) {
+export function getParamFromURL(url: string, key: string) {
   let obj = formatUrl(url);
   return obj[key];
 }
@@ -13,7 +13,7 @@ export function getParamFromURL(url, key) {
  * @param {*} url 网址
  * @return {Object} 对象
  */
-export function formatUrl(url) {
+export function formatUrl(url: string) {
   let params = url.split('?')[1];
   let param = params.split('&');
   let obj = {};

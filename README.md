@@ -1,6 +1,6 @@
 # utils
 
-基于 rollup 封装常用的工具函数
+基于 rollup + typescript 封装常用的工具函数
 
 ### 开始
 
@@ -50,6 +50,8 @@ yarn add core-js@3 -D
 ```
 
 ### 引入 typescript，增强代码的可读性
+
+[link](https://www.tslang.cn/docs/home.html)
 
 ```javascript
 
@@ -114,4 +116,13 @@ npm publish --access=public
 
 // 24小时内可撤销包；删除已在 npm 发布的同名包，需要在24小时后才能重新发布
 npm unpublish --force
+```
+
+### 小技巧-本地快速启动服务器 live-server or http-serve
+
+```javascript
+// 全局安装
+npm install -g live-server
+// 切换到项目根目录,启动服务
+live-server ./
 ```

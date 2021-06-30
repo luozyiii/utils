@@ -6,11 +6,13 @@ import commonjs from 'rollup-plugin-commonjs';
 // ES6 转 ES5，让我们可以使用 ES6 新特性来编写代码
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
+// typescript
+import typescript from '@rollup/plugin-typescript';
 
-const inputPath = path.resolve(__dirname, './src/index.js');
-const outputUmdPath = path.resolve(__dirname, './dist/utils.umd.js');
-const outputEsPath = path.resolve(__dirname, './dist/utils.esm.js');
-const outputCjsPath = path.resolve(__dirname, './dist/utils.cjs.js');
+const inputPath = path.resolve(__dirname, './src/index.ts');
+const outputUmdPath = path.resolve(__dirname, './dist/utils/umd.js');
+const outputEsPath = path.resolve(__dirname, './dist/utils/esm.js');
+const outputCjsPath = path.resolve(__dirname, './dist/utils/cjs.js');
 
 module.exports = {
   input: inputPath,
@@ -31,6 +33,7 @@ module.exports = {
   ],
   plugins: [
     resolve(),
+    typescript(),
     babel({
       exclude: 'node_modules/**',
       runtimeHelpers: true,

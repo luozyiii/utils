@@ -3,7 +3,7 @@
  * @param {*} blob 二进制文件流
  * @param {*} filename 下载后文件名
  */
-export function saveBolbFile(blob, { filename = 'file.xlsx' } = {}) {
+export function saveBolbFile(blob: ArrayBuffer, { filename = 'file.xlsx' } = {}) {
   if (window.URL && window.URL.createObjectURL) {
     const downloadElement = document.createElement('a');
     const href = window.URL.createObjectURL(blob); // 创建下载的链接

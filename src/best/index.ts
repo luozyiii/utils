@@ -11,7 +11,7 @@
  * @param wait 延迟执行毫秒数   鼠标移动事件--函数节流的最值时间间隔应该设置为16ms
  * @param immediate true - 立即执行(默认)， false - 延迟执行
  */
-export function debounce(func, wait, immediate = true) {
+export function debounce(func, wait: number, immediate = true) {
   var timer;
   return function () {
     var context = this; // 注意 this 指向
@@ -49,7 +49,7 @@ export function debounce(func, wait, immediate = true) {
  * @param wait 延迟执行毫秒数   鼠标移动事件--函数节流的最值时间间隔应该设置为16ms
  * @param immediate 默认true  true - 立即执行（时间戳版）， false - 延迟执行（定时器版）
  */
-export function throttle(func, wait, immediate = true) {
+export function throttle(func, wait: number, immediate = true) {
   if (immediate) {
     var previous = 0;
   } else {
