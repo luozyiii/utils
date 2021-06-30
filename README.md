@@ -49,6 +49,27 @@ yarn add core-js@3 -D
 
 ```
 
+### 引入 typescript，增强代码的可读性
+
+```javascript
+
+// 安装支持typescript插件
+yarn add -D typescript
+
+// @rollup/plugin-typescript
+yarn add @rollup/plugin-typescript -D
+
+// rollup.config.ts.js
+import typescript from '@rollup/plugin-typescript';
+
+plugins: [
+  typescript(),
+]
+
+// tslib
+yarn add tslib -D
+```
+
 ### Jest 前端自动化测试
 
 > 保证代码质量
