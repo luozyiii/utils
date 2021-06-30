@@ -72,6 +72,23 @@ plugins: [
 yarn add tslib -D
 ```
 
+- 组件生成声明文件
+
+```javascript
+// tsconfig.json
+tsc --init
+
+// 声明文件放在 types 目录下
+tsc --declaration -p ./ -t es2015 --emitDeclarationOnly --outDir types
+
+
+
+// 通过 package.json 中的 types 指定
+{
+  "types": "types/index.d.ts",
+}
+```
+
 ### Jest 前端自动化测试
 
 > 保证代码质量

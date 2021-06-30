@@ -10,6 +10,7 @@
     "build": "rollup -c rollup.config.dev.js",
     "build:ts": "rollup -c rollup.config.ts.js",
     "build:prod": "rollup -c rollup.config.prod.js",
+    "types": "tsc --declaration -p ./ -t es2015 --emitDeclarationOnly --outDir types",
     "test": "jest"
   },
   "repository": {
