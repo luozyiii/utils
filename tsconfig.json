@@ -3,8 +3,6 @@
     "target": "esnext",
     "module": "esnext",
     "moduleResolution": "node",
-    "declaration": true, // 同时生成声明文件
-    "typeRoots": ["./types"],
     "importHelpers": true,
     "jsx": "react-jsx",
     "esModuleInterop": true,
@@ -12,7 +10,8 @@
     "baseUrl": "./",
     "strict": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+      "@@/*": ["src/.umi/*"]
     },
     "allowSyntheticDefaultImports": true
   },

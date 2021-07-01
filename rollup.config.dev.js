@@ -10,9 +10,9 @@ import json from 'rollup-plugin-json';
 import typescript from '@rollup/plugin-typescript';
 
 const inputPath = path.resolve(__dirname, './src/index.ts');
-const outputUmdPath = path.resolve(__dirname, './dist/utils/umd.js');
-const outputEsPath = path.resolve(__dirname, './dist/utils/esm.js');
-const outputCjsPath = path.resolve(__dirname, './dist/utils/cjs.js');
+const outputUmdPath = path.resolve(__dirname, './dist/utils.umd.js');
+const outputEsPath = path.resolve(__dirname, './dist/utils.esm.js');
+const outputCjsPath = path.resolve(__dirname, './dist/utils.cjs.js');
 
 module.exports = {
   input: inputPath,

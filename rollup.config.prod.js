@@ -13,9 +13,9 @@ import typescript from '@rollup/plugin-typescript';
 import { terser } from 'rollup-plugin-terser';
 
 const inputPath = path.resolve(__dirname, './src/index.ts');
-const outputUmdPath = path.resolve(__dirname, './dist/utils/umd.js');
-const outputEsPath = path.resolve(__dirname, './dist/utils/esm.js');
-const outputCjsPath = path.resolve(__dirname, './dist/utils/cjs.js');
+const outputUmdPath = path.resolve(__dirname, './dist/utils.umd.min.js');
+const outputEsPath = path.resolve(__dirname, './dist/utils.esm.min.js');
+const outputCjsPath = path.resolve(__dirname, './dist/utils.cjs.min.js');
 
 module.exports = {
   input: inputPath,

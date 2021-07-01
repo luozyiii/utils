@@ -135,6 +135,19 @@ npm publish --access=public
 npm unpublish --force
 ```
 
+### npm 包发布到本地调试
+
+```javascript
+// 源npm包安装到本地
+yarn link
+
+// 卸载
+yarn unlink "@leslie0403/utils"
+
+// 在项目中使用 npm 包
+yarn link "@leslie0403/utils"
+```
+
 ### 小技巧-本地快速启动服务器 live-server or http-serve
 
 ```javascript
