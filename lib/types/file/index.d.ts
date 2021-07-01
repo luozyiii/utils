@@ -4,5 +4,5 @@
  * @param {*} filename 下载后文件名
  */
 export declare function saveBolbFile(blob: ArrayBuffer, { filename }?: {
-    filename?: string | undefined;
+    filename?: string;
 }): void;

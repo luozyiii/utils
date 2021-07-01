@@ -7,12 +7,15 @@ import commonjs from 'rollup-plugin-commonjs';
 import babel from 'rollup-plugin-babel';
 import json from 'rollup-plugin-json';
 // typescript
-import typescript from '@rollup/plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
+
+// 压缩 js 代码，包括 ES6 代码压缩、删除注释
+import { terser } from 'rollup-plugin-terser';
 
 const inputPath = path.resolve(__dirname, './src/index.ts');
-const outputUmdPath = path.resolve(__dirname, './dist/utils.umd.js');
-const outputEsPath = path.resolve(__dirname, './dist/utils.esm.js');
-const outputCjsPath = path.resolve(__dirname, './dist/utils.cjs.js');
+const outputUmdPath = path.resolve(__dirname, './lib/utils.umd.js');
+const outputEsPath = path.resolve(__dirname, './lib/utils.esm.js');
+const outputCjsPath = path.resolve(__dirname, './lib/utils.cjs.js');
 
 module.exports = {
   input: inputPath,
@@ -33,13 +36,17 @@ module.exports = {
   ],
   plugins: [
     resolve(),
-    typescript(),
     babel({
       exclude: 'node_modules/**',
-      runtimeHelpers: true,
     }),
     commonjs(),
+    typescript({
+      exclude: 'node_modules/**',
+      typescript: require('typescript'),
+      useTsconfigDeclarationDir: true,
+    }),
     json(),
+    terser(),
   ],
   external: [],
 };

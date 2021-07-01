@@ -58,35 +58,44 @@ yarn add core-js@3 -D
 // 安装支持typescript插件
 yarn add -D typescript
 
-// @rollup/plugin-typescript
-yarn add @rollup/plugin-typescript -D
-
-// rollup.config.ts.js
-import typescript from '@rollup/plugin-typescript';
-
-plugins: [
-  typescript(),
-]
+// rollup-plugin-typescript2
+yarn add rollup-plugin-typescript2 -D
 
 // tslib
 yarn add tslib -D
-```
 
-- 组件生成声明文件
+// rollup.config.js
+import typescript from 'rollup-plugin-typescript2';
 
-```javascript
-// tsconfig.json
-tsc --init
+plugins: [
+  typescript({
+    exclude: 'node_modules/**',
+    typescript: require('typescript'),
+    useTsconfigDeclarationDir: true, // 自动生成types 声明
+  }),
+]
 
-// 声明文件放在 types 目录下
-tsc --declaration -p ./ -t es2015 --emitDeclarationOnly --outDir types
-
-
-
-// 通过 package.json 中的 types 指定
+// 添加tsconfig.json
 {
-  "types": "types/index.d.ts",
+  "compilerOptions": {
+    "target": "es5",
+    "module": "es2015",
+    "lib": ["es2015", "es2016", "es2017", "dom"],
+    "sourceMap": true,
+    "declaration": true,
+    "declarationDir": "lib/types",
+    "typeRoots": ["node_modules/@types"],
+    "moduleResolution": "node",
+    "esModuleInterop": true
+  },
+  "exclude": ["./test", "./lib", "node_modules/"]
 }
+
+// package.json
+"main": "lib/utils.umd.js",
+"module": "lib/utils.esm.js",
+"typings": "lib/types/index.d.ts",
+
 ```
 
 ### Jest 前端自动化测试
@@ -111,6 +120,27 @@ yarn add jest -D
 // 运行
 yarn jest --init
 // 根据需求选择后 根目录生成jest.config.js
+```
+
+- 支持 typesctipt 测试
+
+```javascript
+// 安装
+yarn add -D ts-jest @types/jest
+// .test.js 文件全部改成 .test.ts
+
+// jest.config.js 增加配置
+transform: {
+  '^.+\\.tsx?$': 'ts-jest',
+},
+testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
+moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+```
+
+### eslint 支持(备注：vue-cli 创建的项目如果有 eslint 支持，不添加 eslint 支持会引入失败)
+
+```javascript
+@typescript-eslint/parser
 ```
 
 ### 发布到 npm
