@@ -1,6 +1,47 @@
 # utils
 
-基于 rollup + typescript 封装常用的工具函数
+基于 rollup + typescript 封装常用的工具函数，利用 Jest 实现自动化测试；prettierrc + vscode 自定义工作区 保持代码风格一致；可在 react、vue 项目中使用。
+
+### 基础使用
+
+```javascript
+// 安装
+yarn add -D @leslie0403/utils
+// 使用
+import { isMobile } from '@leslie0403/utils'
+console.log(isMobile('18825040666'))
+
+
+/**
+ * 方法集合
+*/
+
+// 基础校验
+isIDCard              // 身份证校验
+isMobile              // 手机号校验
+isEmail               // 邮箱校验
+
+// URL 参数
+getParamFromURL       // 提取 url 参数
+formatUrl             // 将url参数转化成对象
+
+// 数字处理
+toThousands           // 数字千分为处理  如'1,234,567.45'
+formatNum             // 数字格式化，不进行四舍五入,默认保留2位小数点
+
+// 时间函数
+sleep                 // 延迟多少毫秒后继续执行
+
+// 设备
+getDevice             // 获取手机操作系统类型
+
+// 文件
+saveBolbFile          // 下载二进制文件
+
+// 性能优化
+debounce              // 函数防抖
+throttle              // 函数节流
+```
 
 ### 开始
 
@@ -137,10 +178,23 @@ testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$',
 moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
 ```
 
-### eslint 支持(备注：vue-cli 创建的项目如果有 eslint 支持，不添加 eslint 支持会引入失败)
+### eslint 配置
+
+备注：vue-cli 创建的项目如果有 eslint 支持，不添加 eslint 支持会导致引入失败
 
 ```javascript
-@typescript-eslint/parser
+// 安装
+yarn add @typescript-eslint/parser -D
+
+// 添加.eslintrc.js，是根目录; 最简单的配置；通过vue-cli的eslint规则
+module.exports = {
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    sourceType: 'module',
+  },
+  rules: {},
+};
+
 ```
 
 ### 发布到 npm
@@ -168,7 +222,7 @@ npm unpublish --force
 ### npm 包发布到本地调试
 
 ```javascript
-// 源npm包安装到本地
+// 源npm包安装到本地;在工具库根目录执行
 yarn link
 
 // 卸载
