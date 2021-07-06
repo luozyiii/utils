@@ -212,6 +212,9 @@ npm config set registry http://registry.npm.taobao.org/
 // 登录
 npm login
 
+// 发布包
+npm publish
+
 // 发布私有域的包
 npm publish --access=public
 
