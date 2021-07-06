@@ -227,12 +227,13 @@ npm unpublish --force
 ```javascript
 // 源npm包安装到本地;在工具库根目录执行
 yarn link
-
-// 卸载
-yarn unlink "@leslie0403/utils"
+// 在npm目录下卸载
+yarn unlink
 
 // 在项目中使用 npm 包
 yarn link "@leslie0403/utils"
+// 在项目中卸载 npm 包
+yarn unlink "@leslie0403/utils"
 ```
 
 ### 小技巧-本地快速启动服务器 live-server or http-serve
