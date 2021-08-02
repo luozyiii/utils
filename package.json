@@ -6,9 +6,10 @@
   "module": "lib/utils.esm.js",
   "typings": "lib/types/index.d.ts",
   "scripts": {
-    "dev": "rollup -wc rollup.config.js",
-    "build": "rollup -c rollup.config.js",
-    "test": "jest"
+    "dev": "npm run removeT && rollup -wc rollup.config.js",
+    "build": "npm run removeT && rollup -c rollup.config.js",
+    "test": "jest",
+    "removeT": "rm -rf lib/types"
   },
   "repository": {
     "type": "git",
