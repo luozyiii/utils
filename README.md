@@ -21,6 +21,9 @@ isIDCard              // 身份证校验
 isMobile              // 手机号校验
 isEmail               // 邮箱校验
 
+// 类型判断
+isObject              // 对象判断
+
 // URL 参数
 getParamFromURL       // 提取 url 参数
 formatUrl             // 将url参数转化成对象

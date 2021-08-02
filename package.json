@@ -1,6 +1,6 @@
 {
   "name": "@leslie0403/utils",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "rollup + typescript 构建的常用工具函数库",
   "main": "lib/utils.umd.js",
   "module": "lib/utils.esm.js",

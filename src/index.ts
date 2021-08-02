@@ -1,6 +1,9 @@
 /** reg */
 import { isIDCard, isMobile, isEmail } from './reg';
 
+/** detect */
+import { isObject } from './detect';
+
 /** params */
 import { getParamFromURL, formatUrl } from './params';
 
@@ -23,6 +26,7 @@ export {
   isIDCard,
   isMobile,
   isEmail,
+  isObject,
   getParamFromURL,
   formatUrl,
   toThousands,
