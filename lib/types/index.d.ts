@@ -1,5 +1,7 @@
 /** reg */
 import { isIDCard, isMobile, isEmail } from './reg';
+/** detect */
+import { isObject } from './detect';
 /** params */
 import { getParamFromURL, formatUrl } from './params';
 /** number */
@@ -12,4 +14,4 @@ import { getDevice } from './device';
 import { saveBolbFile } from './file';
 /** best */
 import { debounce, throttle } from './best';
-export { isIDCard, isMobile, isEmail, getParamFromURL, formatUrl, toThousands, formatNum, sleep, getDevice, saveBolbFile, debounce, throttle, };
+export { isIDCard, isMobile, isEmail, isObject, getParamFromURL, formatUrl, toThousands, formatNum, sleep, getDevice, saveBolbFile, debounce, throttle, };
