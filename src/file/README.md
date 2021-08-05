@@ -1,15 +1,9 @@
-#### formatUrl
+## 文件操作
 
-> URL 参数 转换成对象
+### saveBolbFile
 
-```javascript
-formatUrl(location.href);
-```
-
-#### getParamFromURL
-
-> 提取 URL 参数
+> 下载二进制文件
 
 ```javascript
-getParamFromURL(location.href, 'key');
+saveBolbFile(blob);
 ```

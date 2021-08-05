@@ -2,6 +2,33 @@
 
 基于 rollup + typescript 封装常用的工具函数，利用 Jest 实现自动化测试；prettierrc + vscode 自定义工作区 保持代码风格一致；可在 react、vue 项目中使用。
 
+## 架构目录
+
+```bash
+├── .vscode                     # vscode 自定义工作区
+├── example                     # 浏览器直接运行示例
+├── lib                         # 打包目录
+├── src # 源码目录
+│   ├── best                    # 性能优化函数
+│   ├── detect                  # 类型判断
+│   ├── device                  # 设备判断
+│   ├── file                    # 文件操作
+│   ├── number                  # 数字处理
+│   ├── params                  # 参数处理
+│   ├── reg                     # 正则判断
+│   ├── time                    # 时间
+│   └── index.ts                # 导出
+├── .babelrc                    # babel 配置
+├── .eslintrc.js                # eslint 配置
+├── .gitignore                  # git忽略文件
+├── .prettierrc                 # prettier 配置
+├── jest.config.js              # jest 配置
+├── package.json                # Node.js manifest
+├── README.md                   # 文档说明
+├── rollup.config.js            # rollup 打包配置
+└── tsconfig.json               # typescript 配置
+```
+
 ### 基础使用
 
 ```javascript
